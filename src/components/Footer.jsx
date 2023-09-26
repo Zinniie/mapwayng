@@ -7,76 +7,31 @@ function Footer() {
     {
       text: "About Us",
       categories: [
-        "We offer a full scope of real services custom fitted to you as a homeowner. We have a broad portfolio of detached house, semi-detached, lands in Lagos, Abuja, Dubai and London.",
-      ],
-      text2: "Company",
-      categories2: [
-        "About us",
-        "Careers",
-        "Press",
-        "News",
-        "Media kit",
-        "Contact",
+        "At MapWay, we're driven by a vision to revolutionize real estate for millennials, providing enduring investment opportunities through innovative solutions. Our mission is to create exceptional real estate experiences, building lasting partnerships and upholding core values of Integrity, Partnership, Accountability, Customer-Centricity, and Excellence. Innovation fuels our projects, addressing unique client challenges, while a customer-first approach ensures we exceed expectations. We're not just about transactions; we're your trusted partners, committed to reshaping the real estate landscape with excellence at its core.",
       ],
     },
-    {
-      text: "Product",
-      categories: [
-        "Overview",
-        "Features",
-        "Solutions",
-        "Tutorial",
-        "Pricing",
-        "Releases",
-      ],
-      text2: "Company",
-      categories2: [
-        "About us",
-        "Careers",
-        "Press",
-        "News",
-        "Media kit",
-        "Contact",
-      ],
-    },
+
     {
       text: "Resources",
-      categories: [
-        "Blog ",
-        "Newsletter",
-        "Events",
-        "Help centre",
-        "Tutorials",
-        "Support",
-      ],
-      text2: "Use cases",
-      categories2: [
-        "Startups",
-        "Enterprise",
-        "Government",
-        "SaaS",
-        "Marketplaces",
-        "Ecommerce",
-      ],
+      categories: ["About Us", "Our Projects", "Blog ", "Tutorials", "Support"],
     },
     {
       text: "Contact Us",
       categories: [
-        "Twitter",
-        "Facebook",
-        "LinkedIn",
-        "YouTube",
-        'Instagram'
-        
-      ],
-      text2: "Legal",
-      categories2: [
-        "Terms",
-        "Privacy",
-        "Cookies",
-        "Licenses",
-        "Settings",
-        "Contact",
+        "+234 902 880 0969",
+        "mapwayng@gmail.com",
+        {
+          category: "Twitter",
+          link: "https://twitter.com/mapwayng",
+        },
+        {
+          category: "LinkedIn",
+          link: "https://www.linkedin.com/company/mapway-real-estate-limited/",
+        },
+        {
+          category: "Instagram",
+          link: "https://www.instagram.com/mapwayng",
+        },
       ],
     },
   ];
@@ -134,24 +89,88 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="container  ">
+      <div className="container">
         <div className="row">
-          {text.map((item) => (
-            <div className="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 ">
-              <div className="mt-3 mx-5 reminders-main d-flex align-items-center justify-content-between">
-                <div className="enquiries-main-text-1 ">
-                  <div className="text-white text-start mt-5">{item.text}</div>
-                  <div className="mt-4">
-                    {item.categories.map((i, index) => (
-                      <div key={index} className="d-block text-start mt-3">
-                        {i}
-                      </div>
-                    ))}
-                  </div>
+          {/* About Us (6 columns) */}
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div className="mt-3 mx-5 reminders-main d-flex align-items-center justify-content-between">
+              <div className="enquiries-main-text-1 ">
+                <div className="text-white text-start mt-5">{text[0].text}</div>
+                <div className="mt-4">
+                  {text[0].categories.map((category, index) => (
+                    <div key={index} className="d-block text-start mt-3">
+                      {category}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Contact Us (3 columns) */}
+          <div className="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <div className="mt-3 mx-5 reminders-main d-flex align-items-center justify-content-between">
+              <div className="enquiries-main-text-1 ">
+                <div className="text-white text-start mt-5">{text[1].text}</div>
+                <div className="mt-4">
+                  {text[1].categories.map((category, index) => (
+                    <div key={index} className="d-block text-start mt-3">
+                      {category}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <div className="mt-3 mx-5 reminders-main d-flex align-items-center justify-content-between">
+              <div className="enquiries-main-text-1 ">
+                <div className="text-white text-start mt-5">{text[2].text}</div>
+                <div className="mt-4">
+                 
+                      {text[2].categories.map((category, index) => {
+                    let link = "";
+
+                  if (typeof category === "string") {
+                    return (
+                      <div key={index} className="d-block text-start mt-3">
+                        {category}
+                      </div>
+                    );
+                  }
+
+                  switch (category.category) {
+                    case "Twitter":
+                      link = category.link;
+                      break;
+                    case "LinkedIn":
+                      link = category.link;
+                      break;
+                    case "Instagram":
+                      link = category.link;
+                      break;
+                    default:
+                      link = "#";
+                  }
+
+                    return (
+                      <div key={index} className="d-block text-start mt-3">
+                        <a
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className=""
+                          style={{color:  color.lightergrey, textDecoration: "none" }}
+                        >
+                          {category.category}
+                        </a>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -165,7 +184,7 @@ function Footer() {
                   background: color.deepgrey,
                 }}
               >
-                R
+                M
               </div>
               <div className="brand-name fw-bold  mx-2">MapWay</div>
             </div>
@@ -184,7 +203,7 @@ function Footer() {
           <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <div className="d-flex align-items-end justify-content-end  ">
               <div className="subscribebtn ">
-                &copy; 2023 MapWay. All rights reserved
+                &copy; 2023 MapWayNG. All rights reserved
               </div>
             </div>
           </div>

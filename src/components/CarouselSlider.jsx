@@ -66,15 +66,15 @@ const ImageCarousel = () => {
         <div style={overlayStyles}>Text Overlay 1</div>
       </div>
 
-      <div>
-        <img src={PropertyTwo} alt="Slide 2" style={slideStyles} />
-        <div style={overlayStyles}>Text Overlay 1</div>
+      {/* <div> */}
+        {/* <img src={PropertyTwo} alt="Slide 2" style={slideStyles} />
+        <div style={overlayStyles}>Text Overlay 1</div> */}
         {/* <p className="legend">Image 2</p> */}
-      </div>
-      <div>
-        <img src={PropertyThree} alt="Slide 3" style={slideStyles} />
-        <div style={overlayStyles}>Text Overlay 1</div>
-      </div>
+      {/* </div> */}
+      {/* <div> */}
+        {/* <img src={PropertyThree} alt="Slide 3" style={slideStyles} />
+        <div style={overlayStyles}>Text Overlay 1</div> */}
+      {/* </div> */}
     </Carousel>
   );
 };
