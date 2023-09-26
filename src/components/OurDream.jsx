@@ -42,7 +42,7 @@ function OurDream() {
           </div>
         </div>
         <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-          <div className="reminders-main d-flex align-items-center justify-content-center border border success">
+          <div className="mt-4 reminders-main d-flex align-items-center justify-content-center border border success">
             <div className="enquiries-main-text mx-2">
               <div>
                 <img

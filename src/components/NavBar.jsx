@@ -87,12 +87,12 @@ function NavBar() {
                 </Link>
                 <Link to="/our-projects">
                   <div className="mx-4">
-                    Our Projects <RiArrowDropDownLine size={30} />
+                    Our Projects 
                   </div>
                 </Link>
                 <Link to="/resources">
                   <div className="mx-4">
-                    Resources <RiArrowDropDownLine size={30} />
+                    Resources 
                   </div>
                 </Link>
                 <Link to="/contact-us">
@@ -206,7 +206,7 @@ function NavBar() {
                 style={{ textDecoration: "none", color: "black" }}
               >
                 <div className="mx-4">
-                  Our Projects <RiArrowDropDownLine size={30} />
+                  Our Projects  
                 </div>
               </Link>
             </div>
@@ -216,7 +216,7 @@ function NavBar() {
                 style={{ textDecoration: "none", color: "black" }}
               >
                 <div className="mx-4">
-                  Resources <RiArrowDropDownLine size={30} />
+                  Resources
                 </div>
               </Link>
             </div>

@@ -9,7 +9,41 @@ import MapWay5 from "../../src/assets/png/prelaunch.jpg";
 import MapWay6 from "../../src/assets/png/kingscourtprice.jpg";
 
 const ImageCarouselSlider = () => {
+
+   const text = [
+     {
+       image: MapWay1,
+       text: " Ace Real Estate is an award-winning and value-driven real estate",
+       btnn: "Read More",
+     },
+     {
+       image: MapWay2,
+       text: "Ace Real Estate is an award-winning and value-driven real estate",
+       btnn: "Read More",
+     },
+     {
+       image: MapWay3,
+       text: "Ace Real Estate is an award-winning and value-driven real estate",
+       btnn: "Read More",
+     },
+     {
+       image: MapWay4,
+       text: "Ace Real Estate is an award-winning and value-driven real estate",
+       btnn: "Read More",
+     },
+     {
+       image: MapWay5,
+       text: "Ace Real Estate is an award-winning and value-driven real estate",
+       btnn: "Read More",
+     },
+     {
+       image: MapWay6,
+       text: "Ace Real Estate is an award-winning and value-driven real estate",
+       btnn: "Read More",
+     },
+   ];
   const carouselStyles = {
+    
     maxWidth: "1000px", // Adjust the width as needed
     margin: "0 auto", // Center the carousel on the page
   };
@@ -49,7 +83,7 @@ const ImageCarouselSlider = () => {
         <Carousel
           showThumbs={false}
           autoPlay={true}
-          interval={1000} // Adjust the interval as needed
+          interval={5000} // Adjust the interval as needed
           showArrows={false}
           showStatus={false}
           infiniteLoop={true}
@@ -58,7 +92,18 @@ const ImageCarouselSlider = () => {
           centerSlidePercentage={centerSlidePercentage}
           swipeScrollTolerance={true}
         >
-          <div className="pt-1 pb-3" style={slideStyles}>
+          {text.map((slide, index) => (
+            <div
+              key={index}
+              className="border pt-1 pb-3"
+              style={slideStyles}
+            >
+              <img src={slide.image} alt={`Slide ${index + 1}`} />
+              <div style={descriptionStyles}>{slide.text}</div>
+              <a href="/readmore">{slide.btnn}</a>
+            </div>
+          ))}
+          {/* <div className="pt-1 pb-3" style={slideStyles}>
             <img src={MapWay1} alt="Slide 1" />
             <div style={descriptionStyles}>
               Ace Real Estate is an award-winning and value-driven real estate
@@ -81,19 +126,19 @@ const ImageCarouselSlider = () => {
             {/* <a href="/readmore" >
               Read More
             </a> */}
-          </div>
+          {/* </div>
           <div className="pt-1 pb-2" style={slideStyles}>
             <img src={MapWay4} alt="Slide 1" />
-          </div>
-          <div className="pt-1 pb-2" style={slideStyles}>
+          </div> */}
+          {/* <div className="pt-1 pb-2" style={slideStyles}>
             <img src={MapWay5} alt="Slide 1" />
-          </div>
-          <div className="pt-1 pb-2" style={slideStyles}>
+          </div> */}
+          {/* <div className="pt-1 pb-2" style={slideStyles}>
             <img src={MapWay3} alt="Slide 1" />
-          </div>
-          <div className="pt-1 pb-2" style={slideStyles}>
+          </div> */}
+          {/* <div className="pt-1 pb-2" style={slideStyles}>
             <img src={MapWay6} alt="Slide 1" />
-          </div>
+          </div>  */}
         </Carousel>
       </div>
     </div>
