@@ -1,5 +1,5 @@
 import React from "react";
-import PropertyOne from "../../../../src/assets/png/property2.jpeg";
+import PropertyOne from "../../../../src/assets/png/3185942.jpg";
 import styled from "styled-components";
 import ContactForm from "./ContactForm";
 
@@ -28,11 +28,11 @@ const TopImage = styled.img`
 
 const ImageText = styled.div`
   position: absolute;
-  top: 40%;
-  left: 50px;
+  top: 20%;
+  left: 20px;
   // transform: translate(-50%, -50%);
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 `;

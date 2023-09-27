@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PropertyOne from "../../../../src/assets/png/property2.jpeg";
+import PropertyOne from "../../../../src/assets/png/wooden-urban-city-model-sale.jpg";
 import DummyImageOne from "../../../../src/assets/png/dummyImg.jpeg";
 import { color } from "../../../constant/color";
 import { Link } from "react-router-dom";
@@ -9,13 +9,13 @@ const OurProjects = () => {
   return (
     <div>
       <TopImage src={PropertyOne} alt="Slide 1" />
-      <ImageText color={color.cooltint} className="container  mt-4 py-4  text-center">
-        Premium Listings.
-        <div className="container " style={{ height: "2px", width: "70px" }}>
-          .
-        </div>
-        We offer secure, Highly rewarding real estate investment options for a
-        myriad of partners investing in the Nigerian real estate sector.
+      <ImageText
+        style={{ color: color.primary,  }}
+        className="container-fluid  mt-4 py-4  text-center"
+      >
+        At MapWay, we're driven by a vision to revolutionize <br /> real estate
+        for millennials, providing enduring investment <br /> opportunities
+        through innovative solutions.
       </ImageText>
       <div
         className="container "
@@ -268,12 +268,12 @@ const ImageText = styled.div`
   // position: absolute;
   // width: 75%;
   // top: 50%;
-  background: ${(props) => props.color};
+  // background: ${(props) => props.color};
   // margin-left: 170px;
   // left: 50px;
   // transform: translate(-50%, -50%);
-  color: white;
+  // color: color.primary;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 `;

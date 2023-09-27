@@ -54,8 +54,7 @@ const ProjectDetails = () => {
                 modern day investor as well as appeal to aesthetics. With the
                 existing reputation of Veritasi Homes with Camberwall projects,
                 this project promises homes of a high standard, quality
-                finishings and best value for investment. 
-                Our strategy
+                finishings and best value for investment. Our strategy
                 transcends developing homes to solve the housing problems of
                 Nigeria, we have injected interesting metrics to help our
                 clients get cash flow into our product plan. With this,
@@ -79,17 +78,7 @@ const ProjectDetails = () => {
               </div>
               <div className="d-flex mt-3">
                 {" "}
-                <IconContainer>
-                  <Link
-                    to="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon>
-                      <FaFacebookF />
-                    </Icon>
-                  </Link>
-                </IconContainer>
+
                 <IconContainer>
                   <Link
                     to="https://www.instagram.com/mapwayng"
@@ -103,7 +92,7 @@ const ProjectDetails = () => {
                 </IconContainer>
                 <IconContainer>
                   <Link
-                    to="https://www.linkedin.com/"
+                    to="https://www.linkedin.com/company/mapway-real-estate-limited/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -114,23 +103,12 @@ const ProjectDetails = () => {
                 </IconContainer>
                 <IconContainer>
                   <Link
-                    to="https://twitter.com/"
+                    to="https://twitter.com/mapwayng"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Icon>
                       <FaTwitter />
-                    </Icon>
-                  </Link>
-                </IconContainer>
-                <IconContainer>
-                  <Link
-                    to="https://www.youtube.com/@OlamideEniolaPeters"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon>
-                      <FaYoutube />
                     </Icon>
                   </Link>
                 </IconContainer>

@@ -12,6 +12,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const ContactForm = () => {
   return (
@@ -20,7 +21,7 @@ const ContactForm = () => {
 
       // style={{ width: "30%" }}
     >
-      <div className="row g-0" style={{ margin: "40px" }}>
+      <div className="row g-0" style={{}}>
         <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-1">
           <div
             className="reminders-main d-flex align-items-center justify-content-center "
@@ -135,16 +136,16 @@ const ContactForm = () => {
             className="reminders-main d-flex align-items-center justify-content-center "
             style={{ background: color.tomatored, color: "white" }}
           >
-            <div className="enquiries-main-text mx-2 py-4">
+            <div className="enquiries-main-text mx-2 py-4 mt-4">
               <div
                 className="enquiries-main-text-1 text-center"
-                style={{ color: color.cooltint, fontSize: "14px" }}
+                style={{ color: color.cooltint, fontSize: "20px" }}
               >
                 Our Contact Information
               </div>
               <div
                 className="enquiries-main-text-2 text-center mt-4"
-                style={{ color: color.cooltint, fontSize: "14px" }}
+                style={{ color: color.cooltint, fontSize: "16.5px" }}
               >
                 Questions or queries? Get in touch via any of our communication
                 channels with the details below!
@@ -156,11 +157,8 @@ const ContactForm = () => {
               >
                 <div className="d-flex  " style={{ marginRight: "20px" }}>
                   <div>
-                    <li className="mt-2">
-                      <MdOutlineLocationCity size={30} />
-                    </li>
                     <li className=" ">
-                      <TbMailOpened size={30} style={{ marginTop: "28px" }} />
+                      <TbMailOpened size={30} style={{ marginTop: "20px" }} />
                     </li>
                     <li className="">
                       <BiSolidPhoneCall
@@ -170,18 +168,14 @@ const ContactForm = () => {
                     </li>
                   </div>
                   <div style={{ marginLeft: "20px" }}>
-                    <li className="enquiries-list-item ">
-                      1 Towry Close, Idejo Street, Adeola Odeku, Victoria
-                      Island, Lagos
-                    </li>
                     <li className="enquiries-list-item mt-4">
-                      Email: hello@mapway.com
+                      Email: mapwayng@gmail.com
                     </li>
                     <li
                       className="enquiries-list-item mt-4"
                       style={{ marginTop: "10px" }}
                     >
-                      Call: (234) 909 -327 2547
+                      Call: (+234) 902 880 0969
                     </li>
                   </div>
                 </div>
@@ -189,9 +183,32 @@ const ContactForm = () => {
                   className="d-flex align-content-center justify-content-between "
                   style={{ margin: " 66px 120px 0 50px" }}
                 >
-                  <FaFacebookF /> <FaInstagram />
-                  <FaLinkedin />
-                  <FaTwitter /> <FaYoutube />
+                  <Link
+                    to="https://www.instagram.com/mapwayng"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: color.white, textDecoration: "none" }}
+                  >
+                    <FaInstagram />
+                  </Link>
+                  <Link
+                    to="https://www.linkedin.com/company/mapway-real-estate-limited/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: color.white, textDecoration: "none" }}
+                  >
+                    {" "}
+                    <FaLinkedin />
+                  </Link>
+                  <Link
+                    to="https://twitter.com/mapwayng"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: color.white, textDecoration: "none" }}
+                  >
+                    {" "}
+                    <FaTwitter />
+                  </Link>
                 </div>
               </ul>
             </div>
@@ -208,7 +225,6 @@ const ContactUsForm = styled.form`
   border-radius: 10px 0 0 10px;
   // height: 300px;
 `;
-
 
 const ContactUsDetails = styled.div`
   border-radius: 0 10px 10px 0;

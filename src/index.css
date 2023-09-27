@@ -88,9 +88,9 @@ img {
   .nav-categories {
     display: none !important;
   }
-  .contactformcontent {
+  /* .contactformcontent {
     width: 80% !important;
-  }
+  } */
   .mentionsrow {
     margin-left: -10px !important;
   }

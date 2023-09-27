@@ -56,7 +56,7 @@ function OurDream() {
                 className="enquiries-main-text-2 text-center mt-2"
                 style={{ color: color.deepgrey, fontSize: "14px" }}
               >
-               Needs work!
+               Needs work! either you give me a picture you both took together or we take out picture from here completely and do something else
               </div>
               <div
                 className="enquiries-main-text-3 text-center mt-2"

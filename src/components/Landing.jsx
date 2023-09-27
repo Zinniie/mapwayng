@@ -37,7 +37,7 @@ const Landing = () => {
       <OurDream />
 
       <Countup />
-      <div className="mt-4 mb-4">Projects</div>
+      <div  className="container mt-4 mb-4 fs-3">Projects</div>
       <ImageCarouselSlider />
       <Testimonials />
     </div>

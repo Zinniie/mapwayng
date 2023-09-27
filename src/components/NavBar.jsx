@@ -6,14 +6,16 @@ import {
   FaLinkedin,
   FaTwitter,
   FaYoutube,
+  FaPhoneAlt,
 } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import styled from "styled-components";
 import { color } from "../constant/color";
 import { Link } from "react-router-dom";
 import Landing from "./Landing";
 import MapWayLogo from "../assets/png/mapway_logo.png";
-import Demo from '../assets/png/techcrunch.png';
-
+import Demo from "../assets/png/techcrunch.png";
+import { icons } from "react-icons/lib";
 
 function NavBar() {
   const [showNavItems, setShowNavItems] = useState(true);
@@ -43,6 +45,12 @@ function NavBar() {
   const closeNavDrawer = () => {
     setShowNavDrawer(false);
   };
+
+   const handleEmailClick = () => {
+     window.location.href = "mailto:mapwayng@gmail.com"; // Replace with the email address you want to use
+   }; const handlePhoneIconClick = () => {
+     window.location.href = "tel:+234 902 880 0969"; // Replace with the phone number you want to call
+   };
 
   return (
     <div>
@@ -86,15 +94,14 @@ function NavBar() {
                   <div className="mx-4">About Us</div>
                 </Link>
                 <Link to="/our-projects">
-                  <div className="mx-4">
-                    Our Projects 
-                  </div>
+                  <div className="mx-4">Our Projects</div>
                 </Link>
-                <Link to="/resources">
-                  <div className="mx-4">
-                    Resources 
-                  </div>
-                </Link>
+         
+                  <div className="mx-4 text-black">Resources</div>
+             
+                {/* <Link to="/resources">
+                  <div className="mx-4">Resources</div>
+                </Link> */}
                 <Link to="/contact-us">
                   <div className="mx-2">Contact Us</div>
                 </Link>
@@ -102,15 +109,15 @@ function NavBar() {
               <AuthContainer className="nav-auth d-flex align-items-center justify-content-between">
                 <IconContainer>
                   <Link
-                    to="https://www.facebook.com/"
+                    to="https://www.linkedin.com/company/mapway-real-estate-limited/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Icon>
-                      <FaFacebookF />
+                      <FaLinkedin />
                     </Icon>
                   </Link>
-                </IconContainer>
+                </IconContainer>{" "}
                 <IconContainer>
                   <Link
                     to="https://www.instagram.com/mapwayng"
@@ -124,18 +131,7 @@ function NavBar() {
                 </IconContainer>
                 <IconContainer>
                   <Link
-                    to="https://www.linkedin.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon>
-                      <FaLinkedin />
-                    </Icon>
-                  </Link>
-                </IconContainer>
-                <IconContainer>
-                  <Link
-                    to="https://twitter.com/"
+                    to="https://twitter.com/mapwayng"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -145,15 +141,14 @@ function NavBar() {
                   </Link>
                 </IconContainer>
                 <IconContainer>
-                  <Link
-                    to="https://www.youtube.com/@OlamideEniolaPeters"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon>
-                      <FaYoutube />
-                    </Icon>
-                  </Link>
+                  <Icon onClick={handlePhoneIconClick}>
+                    <FaPhoneAlt />
+                  </Icon>
+                </IconContainer>
+                <IconContainer>
+                  <Icon onClick={handleEmailClick}>
+                    <MdEmail />
+                  </Icon>
                 </IconContainer>
                 {/* <div className="login mx-2" type="button">
                   Log in
@@ -205,21 +200,22 @@ function NavBar() {
                 to="/our-projects"
                 style={{ textDecoration: "none", color: "black" }}
               >
-                <div className="mx-4">
-                  Our Projects  
-                </div>
+                <div className="mx-4">Our Projects</div>
               </Link>
             </div>
-            <div className="nav__drawer-item" onClick={closeNavDrawer}>
+            <div className="nav__drawer-item">
+              {/* style={{ textDecoration: "none", color: "black" }} */}
+
+              <div className="mx-4">Resources</div>
+            </div>
+            {/* <div className="nav__drawer-item" onClick={closeNavDrawer}>
               <Link
                 to="/resources"
                 style={{ textDecoration: "none", color: "black" }}
               >
-                <div className="mx-4">
-                  Resources
-                </div>
+                <div className="mx-4">Resources</div>
               </Link>
-            </div>
+            </div> */}
             <div className="nav__drawer-item" onClick={closeNavDrawer}>
               <Link
                 to="/contact-us"
@@ -233,15 +229,15 @@ function NavBar() {
               {" "}
               <IconContainer>
                 <Link
-                  to="https://www.facebook.com/"
+                  to="https://www.linkedin.com/company/mapway-real-estate-limited/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Icon>
-                    <FaFacebookF />
+                    <FaLinkedin />
                   </Icon>
                 </Link>
-              </IconContainer>
+              </IconContainer>{" "}
               <IconContainer>
                 <Link
                   to="https://www.instagram.com/mapwayng"
@@ -255,18 +251,7 @@ function NavBar() {
               </IconContainer>
               <IconContainer>
                 <Link
-                  to="https://www.linkedin.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon>
-                    <FaLinkedin />
-                  </Icon>
-                </Link>
-              </IconContainer>
-              <IconContainer>
-                <Link
-                  to="https://twitter.com/"
+                  to="https://twitter.com/mapwayng"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -276,15 +261,14 @@ function NavBar() {
                 </Link>
               </IconContainer>
               <IconContainer>
-                <Link
-                  to="https://www.youtube.com/@OlamideEniolaPeters"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon>
-                    <FaYoutube />
-                  </Icon>
-                </Link>
+                <Icon onClick={handlePhoneIconClick}>
+                  <FaPhoneAlt />
+                </Icon>
+              </IconContainer>
+              <IconContainer>
+                <Icon onClick={handleEmailClick}>
+                  <MdEmail />
+                </Icon>
               </IconContainer>
             </div>
             {/* <div className="nav__drawer-item login" onClick={closeNavDrawer}>
@@ -315,9 +299,11 @@ const Categories = styled.div`
 // Use styled-components to create a styled div for the authentication elements
 const AuthContainer = styled.div``;
 
-const IconContainer = styled.div`margin-left: 20px;`;
+const IconContainer = styled.div`
+  margin-left: 20px;
+`;
 const Icon = styled.div`
-  color: black; 
+  color: black;
 `;
 
 const NavBrand = styled.div`
